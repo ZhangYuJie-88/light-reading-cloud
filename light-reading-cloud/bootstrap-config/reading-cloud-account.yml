@@ -1,0 +1,70 @@
+# 不配默认为false
+tlog:
+  enable-invoke-time-print: true
+  pattern: '[$preApp][$preIp][$spanId][$traceId]'
+  id-generator: cn.zealon.readingcloud.common.generator.IdGenerator
+server:
+  port: 8003
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+spring:
+  application:
+    name: light-reading-cloud-account
+  # 数据源配置
+  datasource:
+    account-center:
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reading_cloud_account?allowMultiQueries=true&characterEncoding=UTF-8&characterSetResults=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 5
+      min-idle: 5
+      max-active: 30
+      max-wait: 6000
+      test-while-idle: true
+      validation-query: 'select 1 from dual'
+      connect-timeout: 1500
+
+  # 线程池配置
+  thread-pool:
+    # 公用线程池
+    common:
+      corePoolSize: 1
+      maximumPoolSize: 5
+      keepAliveTime: 0
+      queueCapacity: 20480
+    # 书架线程池
+    bookshelf:
+      corePoolSize: 1
+      maximumPoolSize: 3
+      keepAliveTime: 0
+      queueCapacity: 10240
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+
+feign:
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-type: text/html,application/xml,application/json
+      min-request-size: 1024
+    response:
+      enabled: true
+logging:
+  path: /data/logs/${spring.application.name}
+  level:
+    com.alibaba.nacos.client.naming: warn
+
+
+from: dev-environment-1.0...
