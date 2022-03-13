@@ -1,0 +1,16 @@
+2022-03-13 16:08:27.264 - Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:27.271 - Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:27.365 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:29.264 - No URLs will be polled as dynamic configuration sources. 
+2022-03-13 16:08:32.439 - Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:32.444 - Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:32.533 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:33.762 - No URLs will be polled as dynamic configuration sources. 
+2022-03-13 16:08:34.178 - No URLs will be polled as dynamic configuration sources. 
+2022-03-13 16:08:36.689 - Endpoint ID 'nacos-config' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:36.694 - Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:36.765 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:36.792 - Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format. 
+2022-03-13 16:08:37.413 - No URLs will be polled as dynamic configuration sources. 
+2022-03-13 16:08:38.836 - No URLs will be polled as dynamic configuration sources. 
+2022-03-13 16:08:42.765 - No URLs will be polled as dynamic configuration sources. 

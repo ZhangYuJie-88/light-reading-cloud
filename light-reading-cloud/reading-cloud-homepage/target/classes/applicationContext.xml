@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <!--Openfeign的支持-->
+    <bean class="com.yomahub.tlog.feign.filter.TLogFeignFilter"/>
+    <bean class="com.yomahub.tlog.core.aop.AspectLogAop"/>
+
+    <!--自定义模板显示和开启rpc时间打印显示-->
+    <bean class="com.yomahub.tlog.spring.TLogPropertyInit">
+        <property name="pattern" value="[$preApp][$preHost][$preIp][$spanId][$traceId]"/>
+        <property name="enableInvokeTimePrint" value="true"/>
+    </bean>
+
+    <bean class="com.yomahub.tlog.spring.TLogPropertyInit">
+        <property name="pattern" value="[$preApp][$preHost][$preIp][$spanId][$traceId]"/>
+        <property name="enableInvokeTimePrint" value="true"/>
+    </bean>
+
+</beans>
